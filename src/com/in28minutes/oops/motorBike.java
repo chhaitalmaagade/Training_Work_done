@@ -1,8 +1,13 @@
 package com.in28minutes.oops;
 
-public class motorBike {
+public class motorBike<increaseSpeed> {
 
    private int speed;
+
+    public motorBike(int i) {
+
+        this.speed = i;
+    }
 
     void start()
     {
@@ -10,10 +15,32 @@ public class motorBike {
     }
 
 
-    void setSpeed(int speed){
-        this.speed = speed;
+//    MotorBike(int speed) {
+//        this.speed = speed;
+//
+//    }
+
+    //MotorBike(){
+     //       this(5);
+
+       //}
+
+
+
+    public void setSpeed(int speed){
+        if (speed >0)
+            this.speed = speed;
     }
-    int getSpeed(){
+    public int getSpeed(){
         return  this.speed;
     }
+
+    public  void increaseSpeed(int howMuch){
+        setSpeed(this.speed + howMuch);
+    }
+
+    public void decreaseSpeed(int howMuch){
+        setSpeed(this.speed - howMuch);
+    }
+
 }

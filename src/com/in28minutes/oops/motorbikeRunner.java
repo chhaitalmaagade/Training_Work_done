@@ -2,8 +2,8 @@ package com.in28minutes.oops;
 
 public class motorbikeRunner {
     public static void main(String[] args) {
-        motorBike ducati = new motorBike();
-        motorBike honda = new motorBike();
+        motorBike ducati = new motorBike(100);
+        motorBike honda = new motorBike(80);
 
 
         ducati.start();
